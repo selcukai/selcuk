@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js"></script>
+    <style>
+      @font-face { font-family: "Anton"; src: url("assets/fonts/anton-latin-400-normal.woff2") format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+2000-206F, U+20AC; }
+      @font-face { font-family: "Anton"; src: url("assets/fonts/anton-latin-ext-400-normal.woff2") format("woff2"); unicode-range: U+0100-024F, U+1E00-1EFF; }
+      @font-face { font-family: "Inter"; font-weight: 400; src: url("assets/fonts/inter-latin-400-normal.woff2") format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+2000-206F; }
+      @font-face { font-family: "Inter"; font-weight: 400; src: url("assets/fonts/inter-latin-ext-400-normal.woff2") format("woff2"); unicode-range: U+0100-024F; }
+      @font-face { font-family: "Inter"; font-weight: 500; src: url("assets/fonts/inter-latin-500-normal.woff2") format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+2000-206F; }
+      @font-face { font-family: "Inter"; font-weight: 500; src: url("assets/fonts/inter-latin-ext-500-normal.woff2") format("woff2"); unicode-range: U+0100-024F; }
+
+      /* Palet: Sarı vurgu (ekonomi / cebimize dokunan) */
+      :root { --zemin: #121212; --metin: #f4f1ea; --vurgu: #f2d21b; --vurgu-ustu: #111111; }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: var(--zemin); }
+      #root { position: relative; width: 1080px; height: 1920px; background: var(--zemin); }
+      .sahne { position: absolute; inset: 0; overflow: hidden; background: var(--zemin); }
+      .manset { font-family: "Anton"; text-transform: uppercase; color: var(--metin); line-height: 0.98; }
+      .etiket { font-family: "Inter"; font-weight: 500; font-size: 34px; letter-spacing: 3px; background: var(--vurgu); color: var(--vurgu-ustu); padding: 6px 16px; display: inline-block; }
+      .foto { position: absolute; background: #3d3d3a; display: flex; align-items: center; justify-content: center; }
+      .foto span { font-family: "Inter"; font-size: 30px; letter-spacing: 6px; color: #8a8a84; }
+      .k { display: inline-block; }
+      .hl { position: relative; display: inline-block; padding: 0 10px; }
+      .hl i { position: absolute; inset: 4px 0 0 0; background: var(--vurgu); transform-origin: left center; z-index: 0; }
+      .hl b { position: relative; z-index: 1; font-weight: 400; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="14" data-width="1080" data-height="1920">
+
+      <!-- SAHNE 1: Tam ekran foto + alt manşet bandı, kelime kelime -->
+      <div id="s1" class="sahne clip" data-start="0" data-duration="3.6" data-track-index="0" data-layout-allow-overlap>
+        <div id="s1foto" class="foto" style="inset:0"><span>FOTOĞRAF ALANI</span></div>
+        <div style="position:absolute; left:0; right:0; bottom:0; height:1000px; background:var(--zemin); padding:70px 200px 0 120px;">
+          <div class="etiket">KONYA</div>
+          <div class="manset" style="font-size:150px; margin-top:30px;">
+            <span id="w1" class="k">KİRALAR</span> <span id="w2" class="k">BİR</span> <span id="w3" class="k">YILDA</span>
+            <span id="w4" class="k" style="color:var(--vurgu)">UÇTU</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- SAHNE 2: İkiye bölünmüş + fosforlu kalem -->
+      <div id="s2" class="sahne clip" data-start="3.6" data-duration="4.0" data-track-index="1" data-layout-allow-overlap>
+        <div id="s2ic" style="position:absolute; inset:0;">
+          <div class="foto" style="left:0; right:0; top:0; height:820px;"><span>FOTOĞRAF ALANI</span></div>
+          <div style="position:absolute; left:0; right:0; top:820px; height:8px; background:var(--vurgu);"></div>
+          <div style="position:absolute; left:120px; right:200px; top:920px;">
+            <div class="manset" style="font-size:118px;">ÖĞRENCİ EVİNDE KİRA<br><span class="hl"><i id="hl"></i><b id="hlt">18 BİN TL</b></span></div>
+            <div style="font-family:Inter; font-size:40px; color:#bdbab2; margin-top:40px;">Selçuklu ve Meram'da ortalama</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SAHNE 3: Damga -->
+      <div id="s3" class="sahne clip" data-start="7.2" data-duration="3.4" data-track-index="0" data-layout-allow-overlap>
+        <div id="s3ic" style="position:absolute; inset:0; display:flex; flex-direction:column; justify-content:center; padding:0 120px 260px;">
+          <div class="etiket" style="align-self:flex-start;">BİR YILDA</div>
+          <div id="damga" class="manset" style="font-size:360px; color:var(--vurgu); margin-top:10px;">%40</div>
+          <div class="manset" style="font-size:96px;">ARTIŞ</div>
+        </div>
+      </div>
+
+      <!-- SAHNE 4: Gazete künyesi -->
+      <div id="s4" class="sahne clip" data-start="10.6" data-duration="3.4" data-track-index="1">
+        <div style="position:absolute; inset:0; display:flex; flex-direction:column; justify-content:center; align-items:center; padding:0 180px 260px; text-align:center;">
+          <div id="cizgi1" style="width:100%; height:6px; background:var(--metin); transform-origin:center;"></div>
+          <div id="kunye" style="padding:56px 0;">
+            <div style="font-family:Inter; font-size:32px; letter-spacing:8px; color:#8a8a84;">HAZIRLAYAN</div>
+            <div class="manset" style="font-size:120px; line-height:1.15; margin:24px 0 30px;">SELÇUK ÖZKAN</div>
+            <div style="font-family:Inter; font-size:40px; color:#cfccc4;">Haberci ve Tasarımcı</div>
+          </div>
+          <div id="cizgi2" style="width:100%; height:6px; background:var(--metin); transform-origin:center;"></div>
+          <div id="site" style="font-family:Inter; font-size:36px; color:#8a8a84; margin-top:40px;">selcukai.github.io</div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const tl = gsap.timeline({ paused: true });
+
+      // S1: yavaş itme + kelime kelime belirme
+      tl.fromTo("#s1foto", { scale: 1 }, { scale: 1.06, duration: 3.6, ease: "none" }, 0);
+      ["#w1", "#w2", "#w3", "#w4"].forEach((id, i) => {
+        tl.fromTo(id, { opacity: 0, scale: 1.4 }, { opacity: 1, scale: 1, duration: 0.22, ease: "power3.out" }, 0.35 + i * 0.38);
+      });
+
+      // S2 (sert kesme ile gelir): fosforlu kalem
+      tl.fromTo("#hl", { scaleX: 0 }, { scaleX: 1, duration: 0.5, ease: "power2.inOut" }, 4.6);
+      tl.fromTo("#hlt", { color: "#f4f1ea" }, { color: "#111111", duration: 0.2 }, 4.9);
+
+      // S2 -> S3: yakınlaşarak geçiş
+      tl.to("#s2ic", { scale: 1.5, opacity: 0, duration: 0.4, ease: "power2.in" }, 7.2);
+      tl.fromTo("#s3ic", { scale: 0.85, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.4, ease: "power2.out" }, 7.2);
+
+      // S3: damga
+      tl.fromTo("#damga", { scale: 2.6, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.28, ease: "power4.in" }, 7.75);
+      tl.to("#damga", { scale: 1.04, duration: 0.08, yoyo: true, repeat: 1, ease: "power1.out" }, 8.03);
+
+      // S4 (sert kesme): künye
+      tl.fromTo(["#cizgi1", "#cizgi2"], { scaleX: 0 }, { scaleX: 1, duration: 0.5, ease: "power3.out" }, 10.7);
+      tl.fromTo("#kunye", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.45, ease: "power3.out" }, 11.0);
+      tl.fromTo("#site", { opacity: 0 }, { opacity: 1, duration: 0.4 }, 11.4);
+
+      window.__timelines["main"] = tl;
+      tl.seek(0);
+    </script>
+  </body>
+</html>
