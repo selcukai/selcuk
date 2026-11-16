@@ -37,3 +37,11 @@ Kâğıt/hışırtı/swish sesi hiçbir geçişte kullanılmaz.
 - **Kelime kelime:** her kelime seslendirmeyle senkron, hafif büyükten oturarak belirir.
 - **Fosforlu kalem:** kritik kelimenin arkası paletin vurgu rengiyle soldan sağa boyanır.
 - **Damga:** manşet büyükten çarparak oturur. Çarpıcı rakam ve son dakika için.
+
+## Kapanış künyesi
+Gazete künyesi düzeni, ortalı:
+- Üstte ve altta yatay çizgi
+- "HAZIRLAYAN" (küçük, aralıklı)
+- **SELÇUK ÖZKAN** (Anton)
+- Haberci ve Tasarımcı
+- Çizgilerin altında: selcukai.github.io
