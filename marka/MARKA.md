@@ -32,3 +32,8 @@ Bir videoda sahneden sahneye karıştırılabilir.
 - **Sert kesme:** hızlı haber temposu için.
 - **Yakınlaşarak geçiş:** sahne büyüyerek kaybolur, yenisi hafif büyüyerek gelir. Daha dinamik anlar için.
 Kâğıt/hışırtı/swish sesi hiçbir geçişte kullanılmaz.
+
+## Manşet girişleri
+- **Kelime kelime:** her kelime seslendirmeyle senkron, hafif büyükten oturarak belirir.
+- **Fosforlu kalem:** kritik kelimenin arkası paletin vurgu rengiyle soldan sağa boyanır.
+- **Damga:** manşet büyükten çarparak oturur. Çarpıcı rakam ve son dakika için.
