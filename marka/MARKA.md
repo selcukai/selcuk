@@ -27,3 +27,8 @@ Turuncu ağırlıklı palet kullanılmaz.
 Bir videoda sahneden sahneye karıştırılabilir.
 1. **Tam ekran:** Fotoğraf tüm ekranı kaplar, manşet altta düz zemin bandında.
 2. **İkiye bölünmüş:** Fotoğraf üstte, ince vurgu çizgisi, manşet altta düz zeminde.
+
+## Geçişler
+- **Sert kesme:** hızlı haber temposu için.
+- **Yakınlaşarak geçiş:** sahne büyüyerek kaybolur, yenisi hafif büyüyerek gelir. Daha dinamik anlar için.
+Kâğıt/hışırtı/swish sesi hiçbir geçişte kullanılmaz.
