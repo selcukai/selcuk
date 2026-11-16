@@ -16,3 +16,9 @@ Art arda gelen videolarda aynı palet tekrar edilmez.
 | Limon yeşili | #151A14 | #EFEEE6 | #C6F432 |
 
 Turuncu ağırlıklı palet kullanılmaz.
+
+## Hangi haberde hangi palet
+- Kırmızı: son dakika, kaza, acil
+- Sarı: ekonomi, fiyatlar, cebimize dokunan haberler
+- Lacivert: resmî açıklama, sağlık, ciddi konular
+- Limon yeşili: teknoloji, yapay zekâ, genç ve trend içerik
