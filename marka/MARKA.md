@@ -22,3 +22,8 @@ Turuncu ağırlıklı palet kullanılmaz.
 - Sarı: ekonomi, fiyatlar, cebimize dokunan haberler
 - Lacivert: resmî açıklama, sağlık, ciddi konular
 - Limon yeşili: teknoloji, yapay zekâ, genç ve trend içerik
+
+## Yerleşimler
+Bir videoda sahneden sahneye karıştırılabilir.
+1. **Tam ekran:** Fotoğraf tüm ekranı kaplar, manşet altta düz zemin bandında.
+2. **İkiye bölünmüş:** Fotoğraf üstte, ince vurgu çizgisi, manşet altta düz zeminde.
