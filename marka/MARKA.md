@@ -45,6 +45,3 @@ Gazete künyesi düzeni, ortalı:
 - **SELÇUK ÖZKAN** (Anton)
 - Haberci ve Tasarımcı
 - Çizgilerin altında: selcukai.github.io
-
-## Kapak standardı (20 Kasım 2026)
-Reels kapakları ve videoların kapak karesi **D2 antrasit premium** şablonuyla yapılır: koyu antrasit stüdyo zemini, sağdan kırmızı kenar ışığı, fotoğraf üst yarıda zemine erir, Barlow Condensed başlıkta 2. satır vurgu renginde. Şablon ve kullanım: `sahneler/kapak-d2/`. Eski lacivert bantlı kapak ve D1 renge eriyen zemin kullanılmaz.
